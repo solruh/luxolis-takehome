@@ -9,7 +9,7 @@ function App() {
   const [alertMessage,setAlertMessage] = useState("")
   const testAccount = {
     username:"test@luxpmsoft.com",
-    password: "test1234!4"
+    password: "test1234!"
   }
   const handleSubmit = (e) => {
     e.preventDefault()
