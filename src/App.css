@@ -28,9 +28,9 @@
   top: 168.5px;
 }
 .input-block {
-  width: 100%;
-  height: 45px;
   position: relative;
+  height: 45px;
+  width: 100%;
   margin-bottom: 20px;
 }
 .img {
@@ -46,6 +46,7 @@
   font-family: "Montserrat-Light",Helvetica;
   font-size: 14px;
   font-weight: 300;
+  line-height: 20px;
   padding-left: 51px;
   padding-top: 13px;
   padding-bottom: 12px;
@@ -57,7 +58,7 @@
   height: 45px;
   width: 300px;
   position: absolute;
-  top: 135px;
+  top: 153px;
   color: #2148c0;
   font-family: "Montserrat-SemiBold", Helvetica;
   font-size: 16px;
@@ -106,4 +107,6 @@
 }
 .alert {
   color: red;
+  font-size: medium;
+  font-weight: bold;
 }
