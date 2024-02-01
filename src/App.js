@@ -7,10 +7,8 @@ function App() {
   const [showModal,setShowModal] = useState(false)
   const [isLoggedIn,setIsLoggedIn] = useState(false)
   const [alertMessage,setAlertMessage] = useState("")
-  const testAccount = {
-    username:"test@luxpmsoft.com",
-    password: "test1234!"
-  }
+  const [popUpMessage,setPopUpMessage] = useState("")
+  const testAccount = { username:"test@luxpmsoft.com",password: "test1234!"}
   const handleSubmit = (e) => {
     e.preventDefault()
     const validPassword = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]).{3,}$/;
@@ -25,12 +23,14 @@ function App() {
       if(!validPassword.test(password)){
         setAlertMessage("Wrong combination")
       } else {
+        setPopUpMessage("The provided password is wrong.")
         setShowModal(true)
         setAlertMessage("")
       }
     } else if (userName !== testAccount.username) {
       setAlertMessage("")
-      alert("wrong username")
+      setPopUpMessage("Wrong username")
+      setShowModal(true)
     }
   }
   return (
@@ -39,16 +39,16 @@ function App() {
           <div></div> //could have used a react-router-dom but i thought like this is simpler way to satisfy the conditions
       ) : (
         <div className="container">
-          <img className='bgimg' src='BG.svg' alt='background-img'/>
+          <img className='bgimg' src="BG.svg" alt='background-img'/>
           <div className='form-container'>
-            <img className='img-grp' src='Group.svg' alt='cart-group-img'/>
+            <img className='img-grp' src="Group.svg" alt='cart-group-img'/>
             <form onSubmit={handleSubmit} className='form'>
               <div className='input-block'>
-                <img src='user.svg' className='img' alt='user-icon-img'/>
+                <img src="user.svg" className='img' alt='user-icon-img'/>
                 <input value={userName} onChange={(enVal)=>setuserName(enVal.target.value)} placeholder='USERNAME' className='text-input'/>
               </div>
               <div className='input-block'>
-                <img src='lock.svg' className='img' alt='password-lock-icon'/>
+                <img src="lock.svg" className='img' alt='password-lock-icon'/>
                 <input value={password} onChange={(enVal)=>setPassword(enVal.target.value)} placeholder='PASSWORD' className='text-input'/>
               </div>
               {alertMessage && <div className='alert'>{alertMessage}</div>}
@@ -59,10 +59,8 @@ function App() {
           {showModal && (
               <div className='modal'>
                 <div className='modal-content'>
-                  <span className='close' onClick={()=>setShowModal(false)}> 
-                    &times; 
-                  </span>
-                  <p>The provided password is wrong.</p>
+                  <span className='close' onClick={()=>setShowModal(false)}> &times;</span>
+                  <p>{popUpMessage}</p>
                 </div>
               </div>
             )}
