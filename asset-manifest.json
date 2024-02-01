@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/luxolis-takehome/static/css/main.818841c0.css",
-    "main.js": "/luxolis-takehome/static/js/main.2beed19d.js",
+    "main.css": "/luxolis-takehome/static/css/main.120248a1.css",
+    "main.js": "/luxolis-takehome/static/js/main.bf91f2b6.js",
     "static/js/787.608770f0.chunk.js": "/luxolis-takehome/static/js/787.608770f0.chunk.js",
     "index.html": "/luxolis-takehome/index.html",
-    "main.818841c0.css.map": "/luxolis-takehome/static/css/main.818841c0.css.map",
-    "main.2beed19d.js.map": "/luxolis-takehome/static/js/main.2beed19d.js.map",
+    "main.120248a1.css.map": "/luxolis-takehome/static/css/main.120248a1.css.map",
+    "main.bf91f2b6.js.map": "/luxolis-takehome/static/js/main.bf91f2b6.js.map",
     "787.608770f0.chunk.js.map": "/luxolis-takehome/static/js/787.608770f0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.818841c0.css",
-    "static/js/main.2beed19d.js"
+    "static/css/main.120248a1.css",
+    "static/js/main.bf91f2b6.js"
   ]
 }
