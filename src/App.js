@@ -12,7 +12,19 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault()
     const validPassword = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]).{3,}$/;
-    if(password === testAccount.password && userName === testAccount.username){
+    if(password === "" && userName==="") {
+      setPopUpMessage("username and password can't be empty")
+      setShowModal(true)
+      setAlertMessage("")
+    } else if (password === ""){
+      setPopUpMessage("password can't be empty")
+      setShowModal(true)
+      setAlertMessage("")
+    } else if(userName === ""){
+      setPopUpMessage("username can't be empty")
+      setShowModal(true)
+      setAlertMessage("")
+    }else if(password === testAccount.password && userName === testAccount.username){
       if(validPassword.test(password)){
         setIsLoggedIn(true)
         setAlertMessage("")
